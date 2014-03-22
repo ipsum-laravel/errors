@@ -1,0 +1,20 @@
+{
+    "name": "ipsum/errors",
+    "description": "",
+    "authors": [
+        {
+            "name": "B1nj",
+            "email": "postmaster@b1nj.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ipsum\\Errors\\": "src",
+        }
+    },
+    "minimum-stability": "stable"
+}
