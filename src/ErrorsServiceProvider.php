@@ -23,6 +23,11 @@ class ErrorsServiceProvider extends ServiceProvider {
         // $this->app in closures won't work in php 5.3
         $app = $this->app;
 
+        $this->app->down(function() use ($app)
+        {
+            return $app['error']->handleMaintenance();
+        });
+
         // register the error handler
         $this->app->error(function(\Exception $exception, $code) use ($app) {
             return $app['error']->handleException($exception, $code);

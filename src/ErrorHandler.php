@@ -144,6 +144,16 @@ class ErrorHandler
         return Response::make(View::make('IpsumErrors::404'), 404);
     }
 
+    /**
+     * Handle maintenance mode.
+     *
+     * @return void
+     */
+    public function handleMaintenance()
+    {
+        return Response::make(View::make('IpsumErrors::503'), 503);
+    }
+
 	/**
 	 * Handle an alert-level logging event.
 	 *
