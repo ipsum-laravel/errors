@@ -18,7 +18,7 @@ class ErrorsServiceProvider extends ServiceProvider {
 	 */
     public function boot()
     {
-        $this->package('Ipsum/Errors', 'IpsumErrors', __DIR__);
+        $this->package('ipsum/errors', 'IpsumErrors', __DIR__);
 
         // $this->app in closures won't work in php 5.3
         $app = $this->app;
