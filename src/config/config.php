@@ -9,7 +9,7 @@
 
 return array(
     // The email the error reports will be sent to.
-    'dev-email' => 'erreurphp@pixellweb.com',
+    'dev-email' => null,
 
     // send an email even if mail.pretend == true
     'force-email' => false,
