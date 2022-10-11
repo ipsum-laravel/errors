@@ -93,7 +93,7 @@ class ErrorHandler
             Cache::put('IpsumErrors::logs', $mailData, Config::get('IpsumErrors::dureeCache'));
             $minutes = Carbon::now()->addMinutes(1);
 
-            if (!$dateSend = Cache::get('IpsumErrors::dateLastSend') or Carbon::now() > $dateSend->addMinutes(Config::get('IpsumErrors::minutesBetwwenSendMail'))) {
+            if (Config::get('IpsumErrors::dev-email') and (!$dateSend = Cache::get('IpsumErrors::dateLastSend') or Carbon::now() > $dateSend->addMinutes(Config::get('IpsumErrors::minutesBetwwenSendMail')))) {
                 $this->sendMail();
             }
 
